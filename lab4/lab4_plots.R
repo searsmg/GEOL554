@@ -4,6 +4,8 @@
 
 library(ggplot2)
 library(dplyr)
+library(RColorBrewer)
+library(gridExtra)
 
 area <- read.csv("lab4/lake_data.csv")
 
@@ -60,3 +62,39 @@ ggplot(ndsi, aes(x = Name, y = MEDIAN)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 ggsave(paste(PLOT,".png",sep=""), width = 15, height = 9)
+
+
+persis <- ndsi %>%
+  filter(Name %in% c("bl4", "michiganditch", "montgomery"))
+
+PLOT="persistent"
+persfig <- ggplot(persis, aes(x=Month, y=MEDIAN, color=Name)) + 
+  geom_point(size=5, shape=17) +
+  labs(x="Date", y="Median NDSI") +
+  PlotFormat +
+  scale_colour_brewer(palette="Dark2")
+
+ggsave(paste(PLOT,".png",sep=""), width = 15, height = 9)
+
+trans <- ndsi %>%
+  filter(Name %in% c("aspen", "south fork", "tunnel", "dadd", "washout", "dry"))
+
+PLOT="trans"
+transfig <- ggplot(trans, aes(x=Month, y=MEDIAN, color=Name)) + 
+  geom_point(size=5, shape=17) +
+  labs(x="Date", y="Median NDSI") +
+  PlotFormat + scale_colour_brewer(palette="Dark2")
+
+ggsave(paste(PLOT,".png",sep=""), width = 15, height = 9)
+
+PLOT="combo"
+combo <- grid.arrange(transfig, persfig)
+
+ggsave(file="combo.png", combo, width=15, height=9)
+
+thresh <- ndsi %>%
+  filter(MEDIAN > 0.42)
+
+
+ggplot(thresh, aes(x=Month, y=MEDIAN, color=Name)) + geom_point()
+       
