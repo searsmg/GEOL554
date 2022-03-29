@@ -70,3 +70,12 @@ ggplotly(q4)
 
 ```
 
+```{r Q6}
+mask <- readBin("C:/Users/sears/Documents/Classes_SP22/GEOL 554/Labs/Lab9/Data/EASE2_N25km.LOCImask_land50_coast0km.720x720.bin",
+                what = "raw", n = 10000) %>% 
+  as.character()
+
+both_mask <- tibble(both, mask)
+
+```
+
