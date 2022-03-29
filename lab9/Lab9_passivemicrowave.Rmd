@@ -1,11 +1,72 @@
 ---
-title: "Lab9_passivemicrowave"
+title: "GEOL554_Lab9_passivemicrowave"
 author: "Megan Sears"
-date: "3/24/2022"
+date: "3/28/2022"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+library(ncdf4) # package for netcdf manipulation
+library(raster) # package for raster manipulation
+library(stars) # package for geospatial analysis
+library(ggplot2) # package for plotting
+library(tidyverse)
+library(plotly)
+
+```
+
+```{r Q1 and 2}
+# define constants
+r_max <- 22.00180
+r_min <- 0.10033
+q_max <- 65535
+q_min <- 1
+rad_add <- 0.1
+ 
+# now calculate Ml
+ML <- (r_max - r_min)/(q_max - q_min)
+ 
+# now calculate spectral radiance
+L <- ML*20000 + (rad_add)
+```
+
+```{r Q3}
+# now calculate spectral radiance for all values from 1 to 65535
+DNs <- seq(1:65535)
+
+L <- (ML*DNs) + rad_add
+
+all_L <- tibble(DNs, L)
+
+# make a plot of DNs and L - not going to do here
+```
+
+```{r Q4}
+# open the netCDFs
+
+horz <- brick("C:/Users/sears/Documents/Classes_SP22/GEOL 554/Labs/Lab9/Data/NSIDC-0630-EASE2_N25km-F08_SSMI-1990212-19H-E-GRD-CSU-v1.3.nc") %>%
+  as.data.frame(., xy=T) %>%
+  rename(bt_h = X1990.07.31)
+
+
+vert <- brick("C:/Users/sears/Documents/Classes_SP22/GEOL 554/Labs/Lab9/Data/NSIDC-0630-EASE2_N25km-F08_SSMI-1990212-37V-E-GRD-CSU-v1.3.nc") %>%
+  as.data.frame(., xy=T) %>%
+  rename(bt_v = X1990.07.31)
+         
+both <- full_join(horz, vert) %>%
+  filter(x < 2500000, x > 0,
+         y > -2500000, y < 0)
+
+# make a plot
+q4 <- ggplot(both, aes(x=x, y=y, z=bt_h)) + 
+  geom_raster(aes(fill = bt_h)) +
+  #geom_contour(colour = "white") +
+  #coord_quickmap() +
+  scale_fill_distiller(palette = "Spectral")
+
+ggplotly(q4)
+
+
+
 ```
 
