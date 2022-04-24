@@ -1,0 +1,35 @@
+---
+title: "classification_demo"
+author: "Megan Sears"
+date: "4/20/2022"
+output: html_document
+---
+
+```{r}
+#packages
+library(RStoolbox)
+
+
+
+```
+
+
+```{r}
+
+dir.create('data', showWarnings = FALSE)
+if (!file.exists('data/rs/samples.rds')) {
+download.file('https://biogeo.ucdavis.edu/data/rspatial/rsdata.zip', dest = 'data/
+˓→rsdata.zip')
+unzip('data/rsdata.zip', exdir='data')
+}
+
+
+
+```
+
+```{r}
+
+
+
+```
+
