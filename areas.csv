@@ -1,0 +1,85 @@
+,name,product,date,percent_area,burn
+1,BL4,Planet,2021-04-01,0.999178728,burned
+2,BL4,Planet,2021-04-11,0.997978986,burned
+3,BL4,Planet,2021-04-26,1.000128865,burned
+4,BL4,Planet,2021-05-06,1.000113259,burned
+5,BL4,Planet,2021-06-05,0.213862398,burned
+6,BL4,Planet,2021-06-10,0.065914839,burned
+7,BL4,Planet,2021-06-15,0.002804776,burned
+8,Aspen,Planet,2021-04-01,0.991061686,partially burned
+9,Aspen,Planet,2021-04-11,0.710609407,partially burned
+10,Aspen,Planet,2021-04-26,0.896042992,partially burned
+11,Aspen,Planet,2021-05-06,0.919304372,partially burned
+12,Aspen,Planet,2021-06-05,0.530654442,partially burned
+13,Aspen,Planet,2021-06-10,1.20E-05,partially burned
+14,Aspen,Planet,2021-06-15,0,partially burned
+15,Tunnel,Planet,2021-04-01,0.993152147,burned
+16,Tunnel,Planet,2021-04-11,0.757115262,burned
+17,Tunnel,Planet,2021-04-26,0.86487305,burned
+18,Tunnel,Planet,2021-05-06,0.818323821,burned
+19,Tunnel,Planet,2021-06-05,0.114343764,burned
+20,Tunnel,Planet,2021-06-10,4.43E-05,burned
+21,Tunnel,Planet,2021-06-15,0,burned
+22,Michigan trib,Planet,2021-04-01,0.993853139,unburned
+23,Michigan trib,Planet,2021-04-11,0.999855532,unburned
+24,Michigan trib,Planet,2021-04-26,0.992392429,unburned
+25,Michigan trib,Planet,2021-05-06,0.99575595,unburned
+26,Michigan trib,Planet,2021-06-05,0.765459165,unburned
+27,Michigan trib,Planet,2021-06-10,0.616309392,unburned
+28,Michigan trib,Planet,2021-06-15,0.015463662,unburned
+29,Montgomery,Planet,2021-04-01,0.9988669,partially burned
+30,Montgomery,Planet,2021-04-11,0.998610129,partially burned
+31,Montgomery,Planet,2021-04-26,0.999569699,partially burned
+32,Montgomery,Planet,2021-05-06,0.99889259,partially burned
+33,Montgomery,Planet,2021-06-05,0.608467569,partially burned
+34,Montgomery,Planet,2021-06-10,0.517214659,partially burned
+35,Montgomery,Planet,2021-06-15,0.045055811,partially burned
+36,Mt. Campus,Planet,2021-04-01,0.969711297,unburned
+37,Mt. Campus,Planet,2021-04-11,0.892063313,unburned
+38,Mt. Campus,Planet,2021-04-26,0.820950945,unburned
+39,Mt. Campus,Planet,2021-05-06,NA,unburned
+40,Mt. Campus,Planet,2021-06-05,0.732613699,unburned
+41,Mt. Campus,Planet,2021-06-10,0.534586484,unburned
+42,Mt. Campus,Planet,2021-06-15,0.190976024,unburned
+43,BL4,Sentinel-2,2021-04-01,1.000642996,burned
+44,BL4,Sentinel-2,2021-04-11,1.000561738,burned
+45,BL4,Sentinel-2,2021-04-26,1.000817639,burned
+46,BL4,Sentinel-2,2021-05-06,1.000642996,burned
+47,BL4,Sentinel-2,2021-06-05,0.166238395,burned
+48,BL4,Sentinel-2,2021-06-10,0.018574261,burned
+49,BL4,Sentinel-2,2021-06-15,0.003267581,burned
+50,Aspen,Sentinel-2,2021-04-01,0.994869854,partially burned
+51,Aspen,Sentinel-2,2021-04-11,0.908673451,partially burned
+52,Aspen,Sentinel-2,2021-04-26,0.943494091,partially burned
+53,Aspen,Sentinel-2,2021-05-06,0.854853231,partially burned
+54,Aspen,Sentinel-2,2021-06-05,0,partially burned
+55,Aspen,Sentinel-2,2021-06-10,0,partially burned
+56,Aspen,Sentinel-2,2021-06-15,0,partially burned
+57,Tunnel,Sentinel-2,2021-04-01,0.977448287,burned
+58,Tunnel,Sentinel-2,2021-04-11,0.838543821,burned
+59,Tunnel,Sentinel-2,2021-04-26,0.836254316,burned
+60,Tunnel,Sentinel-2,2021-05-06,0.774635073,burned
+61,Tunnel,Sentinel-2,2021-06-05,0.024291174,burned
+62,Tunnel,Sentinel-2,2021-06-10,0,burned
+63,Tunnel,Sentinel-2,2021-06-15,0,burned
+64,Michigan trib,Sentinel-2,2021-04-01,0.9801495,unburned
+65,Michigan trib,Sentinel-2,2021-04-11,0.928081888,unburned
+66,Michigan trib,Sentinel-2,2021-04-26,NA,unburned
+67,Michigan trib,Sentinel-2,2021-05-06,0.999933713,unburned
+68,Michigan trib,Sentinel-2,2021-06-05,0.606185378,unburned
+69,Michigan trib,Sentinel-2,2021-06-10,0.247813131,unburned
+70,Michigan trib,Sentinel-2,2021-06-15,0.024597693,unburned
+71,Montgomery,Sentinel-2,2021-04-01,0.99559895,partially burned
+72,Montgomery,Sentinel-2,2021-04-11,0.98978348,partially burned
+73,Montgomery,Sentinel-2,2021-04-26,NA,partially burned
+74,Montgomery,Sentinel-2,2021-05-06,1.000004479,partially burned
+75,Montgomery,Sentinel-2,2021-06-05,0.550810894,partially burned
+76,Montgomery,Sentinel-2,2021-06-10,0.239808167,partially burned
+77,Montgomery,Sentinel-2,2021-06-15,0.035822464,partially burned
+78,Mt. Campus,Sentinel-2,2021-04-01,0.975517927,unburned
+79,Mt. Campus,Sentinel-2,2021-04-11,0.83160021,unburned
+80,Mt. Campus,Sentinel-2,2021-04-26,0.952563722,unburned
+81,Mt. Campus,Sentinel-2,2021-05-06,0.990954857,unburned
+82,Mt. Campus,Sentinel-2,2021-06-05,0.641917033,unburned
+83,Mt. Campus,Sentinel-2,2021-06-10,0.241903651,unburned
+84,Mt. Campus,Sentinel-2,2021-06-15,0.120424551,unburned
